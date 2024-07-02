@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbaar</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: rgb(13, 26, 31);
+        }
+
+        nav {
+            padding: 10px 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(19, 19, 97);
+            position: relative;
+        }
+
+        /* #menu-list {
+            display: none;
+        }
+
+        #active {
+            display: block;
+        } */
+
+        .logo {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav ul li {
+            list-style-type: none;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .menu-icon {
+            display: none;
+        }
+
+        .menu-icon i {
+            color: white;
+
+        }
+
+        @media (max-width:600px) {
+            nav ul {
+                position: absolute;
+                top: 40px;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                text-align: center;
+                background-color: rgb(19, 19, 97);
+                gap: 10px;
+                overflow: hidden;
+            }
+
+            nav ul li {
+                padding: 10px;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            #menu-list {
+                transition: all 0.5s;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <h1>BHARAT</h1>
+        </div>
+        <ul id="menu-list">
+            <li><a href="">Home</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Service</a></li>
+            <li><a href="">Product</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <div class="menu-icon">
+            <i class="fa-solid fa-bars" id="bar" onclick="toggleMenu()"></i>
+        </div>
+    </nav>
+
+    <script>
+
+        /**********FIRST RIT**************/
+
+
+        let menuList = document.querySelector("#menu-list");
+        menuList.style.maxHeight = "0px"
+
+        function toggleMenu() {
+            if (menuList.style.maxHeight == "0px") {
+
+                menuList.style.maxHeight = "300px";
+
+            } else {
+                menuList.style.maxHeight = "0px";
+
+            }
+        }
+
+
+        /**********SECOND RIT******************/
+
+        // document.querySelector("#menu-list").style.maxHeight = "0px";
+        // function toggleMenu() {
+        //     if ( document.querySelector("#menu-list").style.maxHeight == "0px") {
+
+        //         document.querySelector("#menu-list").style.maxHeight = "300px";
+
+        //     } else {
+        //         document.querySelector("#menu-list").style.maxHeight = "0px";
+
+        //     }
+
+        // }
+
+
+        /*************THIRD RIT (BUT NOT ACEESS)************/
+
+        /* bar = document.querySelector("#bar");
+         bar.onclick = function(){
+              nav = document.querySelector("#menu-list");
+              nav.classList.toggle("#active");
+         }*/
+    </script>
+    <script src="https://kit.fontawesome.com/7ba28808d5.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
